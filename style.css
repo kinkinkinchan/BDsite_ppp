@@ -1,0 +1,997 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    font-family:
+        "Noto Sans JP",
+        sans-serif;
+
+    text-align: center;
+
+    color: #3f5147;
+
+    overflow-x: hidden;
+
+    background: #fff;
+}
+
+
+section {
+    padding: 80px 20px;
+}
+
+
+h1,
+h2 {
+    font-family:
+        "Playfair Display",
+        serif;
+}
+
+
+h2 {
+    font-size: 38px;
+
+    color: #4d9b70;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+カウントダウン
+========================= */
+
+#countdown {
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f8ed,
+            #fffbe8
+        );
+
+    overflow: hidden;
+}
+
+
+.count-box {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.count-box p {
+    margin: 0;
+
+    font-size: 24px;
+
+    color: #4d9b70;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+
+
+#count {
+    margin: 15px 0;
+
+    font-size: 150px;
+
+    line-height: 1;
+
+    color: #4d9b70;
+
+    text-shadow:
+        0 0 10px rgba(77,155,112,.2),
+        0 0 30px rgba(245,215,110,.4);
+
+    transform: scale(.7);
+
+    opacity: 0;
+
+    animation:
+        countdownPop .9s ease forwards;
+}
+
+
+.count-line {
+    width: 60px;
+
+    height: 3px;
+
+    background: #f1d56b;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+.count-message {
+    font-size: 13px;
+
+    color: #777;
+
+    letter-spacing: 2px;
+}
+
+
+@keyframes countdownPop {
+
+    0% {
+        transform: scale(.7);
+        opacity: 0;
+    }
+
+    45% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+#count.count-out {
+    animation:
+        countdownOut .45s ease forwards;
+}
+
+
+@keyframes countdownOut {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+
+/* =========================
+トップ
+========================= */
+
+#hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #e5f7eb
+        );
+}
+
+
+.hero-inner h1 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #4f8f63;
+    letter-spacing: 2px;
+}
+
+
+.birthday-icon {
+    font-size: 65px;
+
+    color: #63a97d;
+
+    animation:
+        heartBeat 1.8s infinite;
+}
+
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+.hero-inner h1 {
+    font-size: 55px;
+
+    color: #4d9b70;
+
+    margin: 15px 0;
+}
+
+
+.hero-inner h1 span {
+    display: block;
+    margin-top: 5px;
+    color: #6fae7d;
+    font-size: 1.15em;
+    letter-spacing: 3px;
+}
+
+
+.hero-inner p {
+    line-height: 2;
+
+    font-size: 18px;
+}
+
+
+.button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 40px;
+
+    background: #4d9b70;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    transition: .3s ease;
+
+    box-shadow:
+        0 8px 20px
+        rgba(77,155,112,.25);
+}
+
+
+.button:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(77,155,112,.35);
+}
+
+
+
+/* =========================
+アルバム
+========================= */
+
+#album {
+    background: #fbfff9;
+
+    min-height: 100vh;
+}
+
+
+.section-lead {
+    color: #777;
+
+    margin-bottom: 8px;
+}
+
+
+.album-guide {
+    color: #4d9b70;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+.album-scroll {
+    display: flex;
+
+    gap: 25px;
+
+    overflow-x: auto;
+
+    padding: 30px 10px 45px;
+
+    scroll-snap-type:
+        x mandatory;
+
+    scrollbar-width: none;
+}
+
+
+.album-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+.album-card {
+    flex:
+        0 0 85%;
+
+    max-width: 480px;
+
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 25px;
+
+    scroll-snap-align:
+        center;
+
+    box-shadow:
+        0 10px 30px
+        rgba(52,104,72,.13);
+
+    transform:
+        translateY(40px)
+        rotate(-2deg);
+
+    opacity: 0;
+
+    transition:
+        1s ease;
+
+    border:
+        1px solid
+        #e1f0e5;
+}
+
+
+.album-card:nth-child(even) {
+    transform:
+        translateY(40px)
+        rotate(2deg);
+}
+
+
+.album-card.show {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        rotate(-1deg);
+}
+
+
+.album-card:nth-child(even).show {
+    transform:
+        translateY(0)
+        rotate(1deg);
+}
+
+
+.album-card img {
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    display: block;
+}
+
+
+.photo-info {
+    padding:
+        12px 5px 5px;
+}
+
+
+.photo-info .date {
+    color: #d1a83c;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.photo-info h3 {
+    margin: 8px 0;
+
+    color: #4d9b70;
+
+    font-size: 21px;
+}
+
+
+.photo-info .place {
+    font-size: 14px;
+
+    color: #777;
+
+    margin: 8px 0;
+}
+
+
+.photo-info .comment {
+    font-size: 14px;
+
+    line-height: 2;
+
+    margin-top: 15px;
+
+    color: #555;
+}
+
+
+
+/* =========================
+好きなところ
+========================= */
+
+#love {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f1faf4
+        );
+}
+
+
+.love-guide {
+    margin-top: -5px;
+
+    margin-bottom: 30px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+.love-grid {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.love-card {
+    background: transparent;
+
+    padding: 0;
+
+    height: 135px;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+}
+
+
+.love-card-inner {
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    transition:
+        transform .7s;
+
+    transform-style:
+        preserve-3d;
+}
+
+
+.love-card.flipped
+.love-card-inner {
+    transform:
+        rotateY(180deg);
+}
+
+
+.love-front,
+.love-back {
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    border-radius: 22px;
+
+    backface-visibility:
+        hidden;
+
+    -webkit-backface-visibility:
+        hidden;
+
+    box-shadow:
+        0 5px 20px
+        rgba(52,104,72,.12);
+}
+
+
+.love-front {
+    background: white;
+
+    color: #3f5147;
+
+    border:
+        1px solid
+        #e1f0e5;
+}
+
+
+.love-front::before {
+    content: "♡";
+
+    color: #d1a83c;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+
+.love-front span {
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+.love-front small {
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    color: #4d9b70;
+
+    letter-spacing: 1px;
+}
+
+
+.love-back {
+    background:
+        linear-gradient(
+            135deg,
+            #4d9b70,
+            #76b991
+        );
+
+    color: white;
+
+    padding: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    transform:
+        rotateY(180deg);
+}
+
+
+.love-card.special
+.love-front {
+    background:
+        linear-gradient(
+            135deg,
+            #fff7c9,
+            #f4df81
+        );
+
+    color: #806b18;
+}
+
+
+.love-card.special
+.love-back {
+    background:
+        linear-gradient(
+            135deg,
+            #d1a83c,
+            #ebcc63
+        );
+}
+
+
+
+/* =========================
+手紙
+========================= */
+
+#letter {
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #315f48,
+            #10271c
+        );
+}
+
+
+.stars {
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    top: 0;
+
+    left: 0;
+
+    background-image:
+
+        radial-gradient(
+            2px 2px at 20% 30%,
+            white,
+            transparent
+        ),
+
+        radial-gradient(
+            1px 1px at 40% 70%,
+            white,
+            transparent
+        ),
+
+        radial-gradient(
+            2px 2px at 70% 20%,
+            #f5d76e,
+            transparent
+        ),
+
+        radial-gradient(
+            1px 1px at 85% 80%,
+            white,
+            transparent
+        );
+
+    background-size:
+        350px 350px;
+
+    animation:
+        starMove 40s linear infinite;
+
+    opacity: .8;
+}
+
+
+@keyframes starMove {
+
+    from {
+        transform:
+            translateY(0);
+    }
+
+    to {
+        transform:
+            translateY(-100px);
+    }
+
+}
+
+
+.letter-box {
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(90%, 700px);
+
+    padding:
+        45px 30px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-radius: 30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.3);
+}
+
+
+.letter-heart {
+    font-size: 45px;
+
+    color: #f5d76e;
+
+    margin-bottom: 10px;
+}
+
+
+.letter-box h2 {
+    color: #f5d76e;
+}
+
+
+.letter-box p {
+    line-height: 2.2;
+}
+
+
+
+/* =========================
+最後
+========================= */
+
+#last {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            #315f48,
+            #10271c
+        );
+}
+
+
+.last-heart {
+    font-size: 65px;
+
+    color: #f5d76e;
+
+    animation:
+        heartBeat 1.8s infinite;
+}
+
+
+#last h1 {
+    font-size: 55px;
+
+    margin-bottom: 5px;
+}
+
+
+#last h2 {
+    color: #f5d76e;
+
+    margin-top: 0;
+}
+
+
+#last p {
+    line-height: 1.8;
+}
+
+
+.last-message {
+    margin-top: 30px;
+
+    color: #f5d76e;
+
+    font-size: 16px;
+}
+
+
+
+/* =========================
+紙吹雪
+========================= */
+
+.confetti {
+    position: fixed;
+
+    top: -30px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    animation:
+        fall linear forwards;
+}
+
+
+@keyframes fall {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+
+}
+
+
+
+/* =========================
+スマホ
+========================= */
+
+@media(max-width:700px) {
+
+    section {
+        padding:
+            60px 15px;
+    }
+
+
+    h2 {
+        font-size: 31px;
+    }
+
+
+    #count {
+        font-size: 110px;
+    }
+
+
+    .count-box p {
+        font-size: 20px;
+    }
+
+
+    .hero-inner h1 {
+        font-size: 38px;
+    }
+
+
+    .hero-inner p {
+        font-size: 15px;
+    }
+
+
+    .birthday-icon {
+        font-size: 50px;
+    }
+
+
+    .button {
+        width: 90%;
+    }
+
+
+    .album-card {
+        flex:
+            0 0 86%;
+    }
+
+
+    .love-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+
+    .love-card {
+        height: 125px;
+    }
+
+
+    .love-front span {
+        font-size: 14px;
+    }
+
+
+    .love-back {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+
+    .letter-box {
+        padding:
+            35px 20px;
+    }
+
+
+    .letter-box p {
+        font-size: 14px;
+
+        line-height: 2;
+    }
+
+
+    #last h1 {
+        font-size: 40px;
+    }
+
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet"
+>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ぴーまんちゃん♡</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+カウントダウン
+========================= -->
+
+<section id="countdown">
+
+    <div class="count-box">
+
+        <p>Happy Birthday</p>
+
+        <h1 id="count">3</h1>
+
+        <div class="count-line"></div>
+
+        <span class="count-message">
+            for PPP♡
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+トップ
+========================= -->
+
+<section id="hero" class="hidden">
+
+    <div id="confetti-container"></div>
+
+    <div class="hero-inner">
+
+        <div class="birthday-icon">
+            ♡
+        </div>
+
+        <h1>
+            Happy Birthday
+            <span>ぴーまんちゃん</span>
+        </h1>
+
+        <p>
+            お誕生日おめでとう！<br>
+            大切な思い出をたくさん集めました♡
+        </p>
+
+        <a href="#album" class="button">
+            思い出を見る 📸
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+アルバム
+========================= -->
+
+<section id="album">
+
+    <h2>Our Memories</h2>
+
+    <p class="section-lead">
+        ぴーまんちゃんとの大切な思い出♡
+    </p>
+
+    <p class="album-guide">
+        横にスライドして見てね → 💚
+    </p>
+
+    <div class="album-scroll" id="album-list"></div>
+
+</section>
+
+
+
+<!-- =========================
+好きなところ
+========================= -->
+
+<section id="love">
+
+    <h2>
+        ぴぴぴの好きなところ
+    </h2>
+
+
+
+    <div class="love-grid">
+
+
+        <div class="love-card"
+            onclick="this.classList.toggle('flipped')">
+
+            <div class="love-card-inner">
+
+                <div class="love-front">
+
+                    <span>優しいところ</span>
+
+                    <small>
+                        Tap ♡
+                    </small>
+
+                </div>
+
+                <div class="love-back">
+
+                    いつも優しくしてくれる<br>
+                    ぴーまんちゃんが大好き♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="love-card"
+            onclick="this.classList.toggle('flipped')">
+
+            <div class="love-card-inner">
+
+                <div class="love-front">
+
+                    <span>面白いところ</span>
+
+                    <small>
+                        Tap ♡
+                    </small>
+
+                </div>
+
+                <div class="love-back">
+
+                    一緒にいるといっぱい<br>
+                    笑えていつも楽しい♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="love-card"
+            onclick="this.classList.toggle('flipped')">
+
+            <div class="love-card-inner">
+
+                <div class="love-front">
+
+                    <span>笑顔</span>
+
+                    <small>
+                        Tap ♡
+                    </small>
+
+                </div>
+
+                <div class="love-back">
+
+                    ぴーまんちゃんの笑顔を見ると<br>
+                    こっちまで嬉しくなる♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="love-card"
+            onclick="this.classList.toggle('flipped')">
+
+            <div class="love-card-inner">
+
+                <div class="love-front">
+
+                    <span>一緒にいて楽しい</span>
+
+                    <small>
+                        Tap ♡
+                    </small>
+
+                </div>
+
+                <div class="love-back">
+
+                    何をしてても楽しくて<br>
+                    気付いたらいつも笑ってる♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="love-card"
+            onclick="this.classList.toggle('flipped')">
+
+            <div class="love-card-inner">
+
+                <div class="love-front">
+
+                    <span>話しやすいところ</span>
+
+                    <small>
+                        Tap ♡
+                    </small>
+
+                </div>
+
+                <div class="love-back">
+
+                    なんでも話せるから<br>
+                    一緒にいると安心する♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="love-card"
+            onclick="this.classList.toggle('flipped')">
+
+            <div class="love-card-inner">
+
+                <div class="love-front">
+
+                    <span>頼りになるところ</span>
+
+                    <small>
+                        Tap ♡
+                    </small>
+
+                </div>
+
+                <div class="love-back">
+
+                    困ったときに頼れる<br>
+                    ぴーまんちゃんが心強い♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="love-card"
+            onclick="this.classList.toggle('flipped')">
+
+            <div class="love-card-inner">
+
+                <div class="love-front">
+
+                    <span>ノリがいいところ</span>
+
+                    <small>
+                        Tap ♡
+                    </small>
+
+                </div>
+
+                <div class="love-back">
+
+                    くだらないことにも付き合ってくれる<br>
+                    ノリのよさが大好き♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="love-card special"
+            onclick="this.classList.toggle('flipped')">
+
+            <div class="love-card-inner">
+
+                <div class="love-front">
+
+                    <span>全部好き♡</span>
+
+                    <small>
+                        Tap ♡
+                    </small>
+
+                </div>
+
+                <div class="love-back">
+
+                    いろいろ書いたけど、<br>
+                    結局ぜんぶ大好き♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+最後のメッセージ
+========================= -->
+
+<section id="letter">
+
+    <div class="stars"></div>
+
+    <div class="letter-box">
+
+        <div class="letter-heart">
+            ♡
+        </div>
+
+        <h2>
+            For PPP♡
+        </h2>
+
+        <p>
+
+            お誕生日おめでとう！<br><br>
+
+            一緒に過ごした時間も、<br>
+            一緒に笑った時間も、<br>
+            たくさんの思い出も、<br>
+            全部大切な宝物です！<br><br>
+
+            これからもたくさん遊んで、<br>
+            たくさん笑って、<br>
+            たくさん思い出を作ろうね！<br><br>
+
+            ぴーまんちゃんにとって<br>
+            素敵な一年になりますように。<br><br>
+
+            これからもよろしくね♡<br><br>
+
+            大好き！
+            
+            きんより
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+最後
+========================= -->
+
+<section id="last">
+
+    <div class="last-heart">
+        ♡
+    </div>
+
+    <h1>
+        Happy Birthday PPP♡
+    </h1>
+
+    <p>
+        Thank you for all the memories.
+    </p>
+
+    <p class="last-message">
+
+        ♡<br>
+
+        来年も、その次も、<br>
+        一緒にお祝いできますように。
+
+    </p>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
