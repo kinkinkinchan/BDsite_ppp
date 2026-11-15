@@ -296,18 +296,6 @@ memories
 
             <div class="photo-info">
 
-                <p class="date">
-                    ${memory.date}
-                </p>
-
-                <h3>
-                    ${memory.title}
-                </h3>
-
-                <p class="place">
-                    ${memory.place}
-                </p>
-
                 <p class="comment">
                     ${memory.comment}
                 </p>
